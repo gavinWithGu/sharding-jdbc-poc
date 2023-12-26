@@ -1,0 +1,12 @@
+spring:
+  profiles:
+#   标准分片
+    active: standardsharding
+#   行表达式分片
+#    active: inlinesharding
+#   Hint分片
+#    active: hintsharding
+  shardingsphere:
+    props:
+      sql:
+        show: true

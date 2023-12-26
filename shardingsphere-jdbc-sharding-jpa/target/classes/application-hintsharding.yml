@@ -1,0 +1,27 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: db1, db2
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # jdbc-url: jdbc:mysql://127.0.0.1:3306/shardingsphere_1
+        jdbc-url: jdbc:mysql://hitachi-iot-test-rds.cath6q1djhtk.rds.cn-northwest-1.amazonaws.com.cn:3306/shardingsphere_1
+        username: hitachi
+        password: hitachi_2023
+      db2:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://hitachi-iot-test-rds.cath6q1djhtk.rds.cn-northwest-1.amazonaws.com.cn/shardingsphere_2
+        username: hitachi
+        password: hitachi_2023
+    sharding:
+      tables:
+        student:
+          actual-data-nodes: db$->{1..2}.tb_student_$->{1..3}
+          database-strategy:
+            hint:
+              algorithm-class-name: com.shardingsphere.sharding.jpa.algorithm.DatabaseHintShardingAlgorithm
+          table-strategy:
+            hint:
+              algorithm-class-name: com.shardingsphere.sharding.jpa.algorithm.TableHintShardingAlgorithm

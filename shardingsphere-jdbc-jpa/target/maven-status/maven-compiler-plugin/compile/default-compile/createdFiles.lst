@@ -1,0 +1,4 @@
+com\shardingsphere\jpa\dao\repository\StudentRepository.class
+com\shardingsphere\jpa\dao\entity\Student$StudentBuilder.class
+com\shardingsphere\jpa\service\StudentService.class
+com\shardingsphere\jpa\dao\entity\Student.class
