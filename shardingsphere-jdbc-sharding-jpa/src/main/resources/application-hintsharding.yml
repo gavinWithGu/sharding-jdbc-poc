@@ -6,15 +6,15 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
         # jdbc-url: jdbc:mysql://127.0.0.1:3306/shardingsphere_1
-        jdbc-url: jdbc:mysql://hitachi-iot-test-rds.cath6q1djhtk.rds.cn-northwest-1.amazonaws.com.cn:3306/shardingsphere_1
-        username: hitachi
-        password: hitachi_2023
+        jdbc-url: ***
+        username: ***
+        password: ***
       db2:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        jdbc-url: jdbc:mysql://hitachi-iot-test-rds.cath6q1djhtk.rds.cn-northwest-1.amazonaws.com.cn/shardingsphere_2
-        username: hitachi
-        password: hitachi_2023
+        jdbc-url: ***
+        username: ***
+        password: ***
     sharding:
       tables:
         student:
